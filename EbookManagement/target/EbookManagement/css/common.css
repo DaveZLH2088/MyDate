@@ -1,0 +1,261 @@
+﻿@charset "utf-8";
+
+.span{
+    color: #dc241e;
+}
+/* CSS Document */
+/*table*/
+.bian{
+	BACKGROUND-COLOR:#ebebeb;
+}
+.admin-list
+{
+	margin:20px;
+	width:93%;
+	border:1px;
+	cellpadding:1px ;
+	/*cellspacing=1;*/
+	BORDER: #3e99dd 3px solid; 
+	font-size:14px;
+	BACKGROUND-COLOR: #c0c0c0;
+	TEXT-ALIGN: center;
+	/*background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);*/
+	background:-webkit-repeating-linear-gradient(/*#3e99dd, #a5ffa9,#11eed8,*/ #cbb8ff,#fbd799,#fafbbd/*,#dcffe2*//*, #ffe46e,#f0fba1, #fffabe*/);
+
+}
+.admin-list-head{
+	FONT-WEIGHT: bold; HEIGHT: 30px; BACKGROUND-COLOR: #ebebeb; TEXT-ALIGN: center;
+	background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);
+}
+.admin-list-body{
+	FONT-WEIGHT: bold; HEIGHT: 25px;
+	 BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center;
+	/*background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);*/
+}
+.admin-list-foot{
+	FONT-WEIGHT: bold; HEIGHT: 30px;
+	 TEXT-ALIGN: center;
+	/*background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);*/
+}
+.div{
+
+	color:#000000;
+            position: relative;
+            margin-left: 250px;
+            margin-top: 100px;
+             padding: 5px;
+            border-radius: 20px;
+            width:900px ;
+          /*  height: 400px;*/
+            /* 表体文字居左删除下一个 */
+            TEXT-ALIGN: center;
+            border: 2px solid gainsboro;
+            background-color:#ffffff;
+           /* background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);*/
+	background:-webkit-repeating-linear-gradient(/*#3e99dd, #a5ffa9,#11eed8,*/ #cbb8ff,#fbd799,#fafbbd/*,#dcffe2*//*, #ffe46e,#f0fba1, #fffabe*/);
+           /*  background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8, #cbb8ff,#fbd799,#fafbbd,#dcffe2, #ffe46e,#f0fba1, #fffabe); */
+        }
+        .divAdd{
+            margin-left: 250px;
+            margin-top: 100px;
+			color:#000000;
+            position: relative;
+            /* padding: 20px; */
+            border-radius: 20px;
+            width:400px ;
+            /* 表体文字居左删除下一个 */
+            TEXT-ALIGN: center;
+            border: 2px solid gainsboro;
+            background-color:#ffffff;
+            background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);
+           /*  background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8, #cbb8ff,#fbd799,#fafbbd,#dcffe2, #ffe46e,#f0fba1, #fffabe); */
+        }
+   /*按钮  */     
+.page-btn
+{
+	border:1px solid #b8b8b8;
+	background-color:#fafffd;
+	display:inline-block;
+	width:52px;
+	height:25px;
+	line-height:25px;
+	font-weight: bold;
+}
+
+.toolbar2{ margin-top:20px;border-radius: 3px; }
+
+.toolbar1 tr .zi{ line-height:33px; height:33px; text-align:center;}
+
+.button2{margin-left: 50px;border-radius: 5px;}
+
+
+
+/*page*/ /*第1套页码*/
+.pagin{position:relative;margin-top:10px;padding:0 12px;}
+.pagin .blue{color:#EB5409;font-style:normal;}
+.pagin .paginList{position:absolute;right:12px;top:0;}
+.pagin .paginList .paginItem{float:left;}
+.pagin .paginList .paginItem a{float:left;width:31px;height:28px;border:1px solid #DDD; text-align:center;line-height:30px;border-left:none;color:#EB5409;}
+.pagin .paginList .paginItem:first-child a{border-left:1px solid #DDD;}
+.pagin .paginList .paginItem:first-child a{border-bottom-left-radius:5px;border-top-left-radius:5px;}
+.pagin .paginList .paginItem:last-child a{border-bottom-right-radius:5px;border-top-right-radius:5px;}
+.pagin .paginList .paginItem.current,.pagin .paginList .paginItem.current a{background:#f5f5f5; cursor:default;color:#737373;}
+.pagin .paginList .paginItem:hover{background:#f5f5f5;}
+.pagin .paginList .paginItem.more,.pagin .paginList .paginItem.more a:hover{ cursor:default;}
+.pagin .paginList .paginItem.more:hover{background:#FFF;}
+.pagin .paginList .paginItem.more a{color:#737373;}
+.pagepre{/*background:url(../images/pre.gif) no-repeat center center; */width:31px; height:28px;}
+.pagenxt{/*background:url(../images/next.gif) no-repeat center center;*/ width:31px; height:28px;}
+
+
+
+/*第2套页码*/
+.page-bar
+{
+	position:relative;
+	margin-top:10px;
+}
+.page-num-ul li
+{
+	float:left;
+}
+.page-num-ul li a
+{
+	display:inline-block;
+	padding:3px 5px;
+	margin:0px 3px;
+	border:1px solid #b8b8b8;
+}
+.page-num-ul a:hover,.page-num-ul .thisclass
+{
+	border:1px solid #00925d;
+	background-color:#00925d;
+	color:#FFF;
+	text-decoration:none;
+}
+.page-key
+{
+	width:50px;
+}
+.page-btn
+{
+	border:1px solid #b8b8b8;
+	background-color:#fafffd;
+	display:inline-block;
+	width:52px;
+	height:25px;
+	line-height:25px;
+	font-weight:bold;
+}
+.page-go-form
+{
+	position:absolute;
+	display:inline-block;
+	right:50px;
+	top:0px;
+}
+.page-go-form input,label,button
+{
+	margin:0px 5px;
+}
+/*luck*/
+.luck{
+	color: #7155ff;
+	right: 10px;
+	padding: 5px;
+	margin: 10px;
+	height:20px;clear:both;border-radius:30px;
+	background:-webkit-repeating-linear-gradient(#fafbbd,#cbb8ff);
+	white-space:nowrap;position:relative;}
+/*user*/
+.user{
+	color: #7155ff;
+	right: 10px;
+	padding: 5px;
+	margin-left:100px;
+	height:20px;clear:both;border-radius:30px;
+	background:-webkit-repeating-linear-gradient(#fafbbd,#cbb8ff);
+	white-space:nowrap;position:relative;}
+
+/*当前时间样式*/
+.systime{
+	left:4px;
+	margin-right: 300px;
+	haght:20px;
+	padding: 5px;
+	background:-webkit-repeating-linear-gradient(#fafbbd,#cbb8ff);
+}
+.systime span{font-size:16px;color:#fff;}
+
+
+/*!*动态渐变颜色*!
+#myDIV
+{
+	width:300px;
+	height:200px;
+	background:-webkit-repeating-linear-gradient(!*#3e99dd, #a5ffa9,#11eed8,*! #cbb8ff,#fbd799,#fafbbd
+		!*,#dcffe2*!!*, #ffe46e,#f0fba1, #fffabe*!);
+	animation:mymove 5s infinite;
+	!*Safari 和 Chrome:*!
+	-webkit-animation:mymove 5s infinite;
+}
+
+@keyframes mymove
+{
+	from {background-color:red;}
+	to {background-color:blue;}
+	from {background:-webkit-repeating-linear-gradient(!*#3e99dd, #a5ffa9,#11eed8,*!
+			#cbb8ff,#fbd799,#fafbbd!*,#dcffe2*!!*, #ffe46e,#f0fba1, #fffabe*!);}
+	to {background:-webkit-repeating-linear-gradient(#ddffb3, #fbcf55, #8298fb);}
+}
+
+!*Safari 和 Chrome:*!
+@-webkit-keyframes mymove
+{
+	from {background-color:red;}
+	to {background-color:blue;}
+}*/
+
+/*!*动态渐变颜色*/
+#myDIV{
+	color:#000000;
+	position: relative;
+	margin-left: 250px;
+	margin-top: 100px;
+	padding: 5px;
+	border-radius: 20px;
+	width:900px ;
+	/*  height: 400px;*/
+	/* 表体文字居左删除下一个 */
+	TEXT-ALIGN: center;
+	border: 20px solid gainsboro;
+	background-color:#ffffff;
+	/* background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8);*/
+	background:-webkit-repeating-linear-gradient(/*#3e99dd, #a5ffa9,#11eed8,*/ #cbb8ff,#fbd799,#fafbbd/*,#dcffe2*//*, #ffe46e,#f0fba1, #fffabe*/);
+	/*  background:-webkit-repeating-linear-gradient(#3e99dd, #a5ffa9,#11eed8, #cbb8ff,#fbd799,#fafbbd,#dcffe2, #ffe46e,#f0fba1, #fffabe); */
+	/*变变变*/
+	-webkit-animation: mymove 7s infinite; /* Chrome, Safari, Opera */
+	animation: mymove 7s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+	/*50% {border-color: lightblue;}*/
+	50% {border: 15px solid lightblue;}
+	50% {color: blue;}
+	from {background:-webkit-repeating-linear-gradient(/*#3e99dd, #a5ffa9,#11eed8,*/
+			#cbb8ff,#fbd799,#fafbbd/*,#dcffe2*//*, #ffe46e,#f0fba1, #fffabe*/);}
+	to {background:-webkit-repeating-linear-gradient(#ddffb3, #fbcf55, #8298fb);}
+
+}
+
+/* Standard syntax */
+@keyframes mymove {
+	/*50% {border-color: lightblue;}*/
+	50% {border: 15px solid lightblue;}
+	50% {color: blue;}
+
+	from {background:-webkit-repeating-linear-gradient(/*#3e99dd, #a5ffa9,#11eed8,*/
+			#cbb8ff,#fbd799,#fafbbd/*,#dcffe2*//*, #ffe46e,#f0fba1, #fffabe*/);}
+	to {background:-webkit-repeating-linear-gradient(#8298fb, #fbcf55, #ddffb3);}
+}

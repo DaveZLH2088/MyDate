@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hotle.dao.HotelRoomMapper">
+
+   <!-- <select id="getRoomList" resultType="cn.hotle.pojo.HotleRoom">
+        SELECT * FROM hotleroom
+    </select>
+    <select id="getRoomTypeByID" resultType="cn.hotle.pojo.HotleRoom">
+        SELECT * FROM hotleroom
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="roomid != null">
+                and roomid = #{roomid}
+            </if>
+        </trim>
+    </select>-->
+</mapper>

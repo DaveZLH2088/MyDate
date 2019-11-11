@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.air.dao.AirqualityMapper">
+    <insert id="add" parameterType="Book">
+		INSERT INTO air_quality_index (district_id,monitor_time,pm10,pm25,monitoring_station,last_modify_time)
+        VALUES (#{district_id},#{monitor_time},#{pm10},#{pm25},#{monitoring_station},
+					   #{last_modify_time});
+    </insert>
+    <update id="modify">
+        UPDATE air_quality_index
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+            <if test="district_id != null">district_id=#{district_id},</if>
+           <if test="monitor_time != null">monitor_time=#{monitor_time},</if>
+            <if test="pm10 != null">pm10=#{pm10},</if>
+            <if test="pm25 != null">pm25=#{pm25},</if>
+            <if test="monitoring_station != null">monitoring_station=#{monitoring_station},</if>
+            <if test="last_modify_time != null">last_modify_time=#{last_modify_time},</if>
+        </trim>
+    </update>
+   <!-- <delete id="deleteBook">
+
+    </delete>-->
+    <delete id="deleteAir">
+        delete from air_quality_index where id=#{id}
+    </delete>
+    <!--<select id="getBookList" resultType="cn.air.pojo.Book">
+        SELECT *FROM  book
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="choose != null and choose != ''">
+                <if test="choose==1">
+                    and bname like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==2">
+                    and bauthor like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==3">
+                    and publish like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==4">
+                    and prices like CONCAT ('%',#{likes},'%')
+                </if>
+            </if>
+        </trim>
+        ORDER BY publishdate DESC
+        limit #{from},#{pageSize}
+    </select>-->
+
+   <!-- <select id="getBookCount" resultType="java.lang.Integer">
+        select count(*) as count from  book
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="choose != null and choose != ''">
+                <if test="choose==1">
+                    and bname like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==2">
+                    and bauthor like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==3">
+                    and publish like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==4">
+                    and prices like CONCAT ('%',#{likes},'%')
+                </if>
+            </if>
+        </trim>
+    </select>-->
+
+    <select id="getAirByid" resultType="cn.air.pojo.Air_quality_index">
+        SELECT * FROM air_quality_index
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id = #{id}
+            </if>
+        </trim>
+    </select>
+
+   <!-- <select id="getLogin" resultType="cn.air.pojo.User">
+        select * from USER
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="name != null">
+                and name = #{name}
+            </if>
+            <if test="password != null">
+                and password =#{password}
+            </if>
+        </trim>
+    </select>-->
+    <select id="getAirList" resultType="cn.air.pojo.Air_quality_index">
+        SELECT  a.* , d.name as name FROM air_quality_index a INNER JOIN `district`  d ON  a.district_id=d.id
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="choose != null and choose != ''">
+               <if test="choose>0">
+                   and a.`district_id` like CONCAT ('%',#{choose},'%')
+                </if>
+            </if>
+        </trim>
+        ORDER BY last_modify_time DESC
+        limit #{from},#{pageSize}
+    </select>
+    <select id="getAirCount" resultType="java.lang.Integer">
+        select count(*) as count from  air_quality_index a INNER JOIN district  d ON  a.district_id=d.id
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="choose != null and choose != ''">
+                <if test="choose != null and choose != ''">
+                    <if test="choose>0">
+                        and a.`district_id` like CONCAT ('%',#{choose},'%')
+                    </if>
+                </if>
+            </if>
+        </trim>
+    </select>
+
+
+</mapper>

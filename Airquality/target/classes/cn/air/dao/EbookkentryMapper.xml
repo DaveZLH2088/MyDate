@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.air.dao.EbookkentryMapper">
+
+    <select id="getEbookentryList" resultType="cn.air.pojo.Ebookentry">
+        SELECT *FROM  ebookentry
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="choose != null and choose != ''">
+                <if test="choose==1">
+                    and roomid like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==2">
+                    and rName like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==3">
+                    and idNumber like CONCAT ('%',#{likes},'%')
+                </if>
+                <if test="choose==4">
+                    and phoneNumber like CONCAT ('%',#{likes},'%')
+                </if>
+            </if>
+        </trim>
+        order by rtime DESC limit #{from},#{pageSize}
+    </select>
+
+    <select id="getEbookentryCount" resultType="java.lang.Integer">
+
+    </select>
+</mapper>
